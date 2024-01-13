@@ -7,8 +7,8 @@ hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
 
-img = cv2.imread('peron.png')
-img = cv2.resize(img, (1200,600))
+img = cv2.imread('peron2.jpg')
+img = cv2.resize(img, (800,500))
 
 #print(type(img))
 #print(img.shape)
