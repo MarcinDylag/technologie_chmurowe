@@ -9,8 +9,7 @@ hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 app = Flask(__name__)
 api = Api(app)
 
-# url = 'https://vs-static.virtualspeech.com/img/env/lecture-hall-full.jpg'
-
+url = 'https://vs-static.virtualspeech.com/img/env/lecture-hall-full.jpg'
 
 class PeopleCounter(Resource):
     def get(self):
