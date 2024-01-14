@@ -16,3 +16,11 @@ http://127.0.0.1:5000/dynamic?url=https://i.pinimg.com/originals/aa/5b/e2/aa5be2
 
 1) zrobić 3 GET, który zwraca formularz HTML z zapytaniem o zdjęcie do załadowania.
 Po załadowaniu zdjęcia uruchamia POST, który wysyła zdjęcie do przeanalizowania i zwraca obliczoną ilość ludzi na zdjęciu.
+
+---------------------------------------------------------
+biblioteki:
+
+pip install urllib3
+pip install opencv-python
+pip install Flask
+pip install Flask-RESTful
