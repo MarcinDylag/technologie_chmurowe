@@ -1,0 +1,10 @@
+First image address:
+http://127.0.0.1:5000
+
+Second image address:
+
+http://127.0.0.1:5000/dynamic?url=https://i.pinimg.com/originals/aa/5b/e2/aa5be2881f3ceabb216bea0e266f85e9.jpg
+
+
+	- add at the end:
+		/dynamic?url=<image address>
