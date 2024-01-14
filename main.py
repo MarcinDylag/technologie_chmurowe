@@ -10,8 +10,6 @@ hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 app = Flask(__name__)
 api = Api(app)
 
-name = 'download.jpg'
-
 
 class PeopleCounterStatic(Resource):
     def get(self):
@@ -28,8 +26,9 @@ class PeopleCounterDynamic(Resource):
 
     def get(self):
         url = request.args.get('url')
-        urllib.request.urlretrieve(url, name)
-        img2 = cv2.imread(name)
+        file_name = 'download.jpg'
+        urllib.request.urlretrieve(url, file_name)
+        img2 = cv2.imread(file_name)
         img2 = cv2.resize(img2, (800, 500))
         (rects, weights) = hog.detectMultiScale(img2, winStride=(3, 3), padding=(4, 4), scale=1.05)
         return {'peopleCount': len(rects)}
