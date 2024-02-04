@@ -1,24 +1,39 @@
-First image address:
+Informacja do prowadzącego:
+
+Witam,
+
+Projekt na 5 (na5.py) zrobiłem inaczej niż na zajęciach i nie wiem czy takie rozwiązanie Panu odpowiada,
+niemniej starałem się przy użyciu wszystkich możliwych forów itd rozwiązać problem:)
+
+Projekt na 4 został zawarty w pliku na4.py.
+
+------------------------------------------------------------------------------------------------------------------------
+INSTRUKCJE
+
+Na ocenę 4 - na4.py:
+
+1) Wyświetlanie domyślnego zdjęcia (z pliku):
 http://127.0.0.1:5000
 
-Second image address:
+2) Wyświetlanie kolejnych zdjęć (za pomocą zmiany URL):
+- dodać na końcu:
+    /dynamic?url=<image address>
+- przykład
+    http://127.0.0.1:5000/dynamic?url=https://i.pinimg.com/originals/aa/5b/e2/aa5be2881f3ceabb216bea0e266f85e9.jpg
 
-http://127.0.0.1:5000/dynamic?url=https://i.pinimg.com/originals/aa/5b/e2/aa5be2881f3ceabb216bea0e266f85e9.jpg
+------------------------------------------------------------------------------------------------------------------------
+Na ocenę 5 - na5.py:
+1) Należy uruchomić plik - wyświeli się domyślne zdjęcie (z pliku)
+2) Po kliknięciu przycisku "Recognize" zwrócone zostanie zdjęcie z dorysowanymi prostokątami odpowiadającymi
+rozpoznanym osobom oraz informacja o ilości rozpoznanych osób
+3) Po kliknięciu przycisku "Change photo" wczytany zostaje formularz, gdzie należy wkleić adres URL zdjęcia,
+które chcemy załadować. Po kliknięciu przycisku "UPLOAD" zostaje ono wyświetlone na stronie
+4) Wczytane zdjęcie również może zostać poddane procesowi rozpoznawania osób przez kliknięcie przycisku "Recognize"
+5) Po kliknięciu przycisku "Back to main page" zostajemy przeniesieni do strony głównej, gdzie ponownie
+zostaje wyświetlone domyślne zdjęcie.
 
-
-	- add at the end:
-		/dynamic?url=<image address>
-
-
-
---------------------------------------------------------
-3 endpoint (na 5):
-
-1) zrobić 3 GET, który zwraca formularz HTML z zapytaniem o zdjęcie do załadowania.
-Po załadowaniu zdjęcia uruchamia POST, który wysyła zdjęcie do przeanalizowania i zwraca obliczoną ilość ludzi na zdjęciu.
-
----------------------------------------------------------
-biblioteki:
+------------------------------------------------------------------------------------------------------------------------
+UŻYTE BIBLIOTEKI
 
 pip install urllib3
 pip install opencv-python

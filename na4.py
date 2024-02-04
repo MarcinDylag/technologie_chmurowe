@@ -14,7 +14,7 @@ api = Api(app)
 class PeopleCounterStatic(Resource):
     def get(self):
         # Loading and Resizing the Image
-        img = cv2.imread('peron2.jpg')
+        img = cv2.imread('static/station.jpg')
         img = cv2.resize(img, (800, 500))
         # Detecting all the regions in the image with people in it
         (rects, weights) = hog.detectMultiScale(img, winStride=(3, 3), padding=(4, 4), scale=1.05)
